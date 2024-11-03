@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-
 
         <nav>
             <div style="display:flex;align-items: center; gap: 2px;">
@@ -19,10 +19,10 @@
             <div class="nav_links" id="navLinks">
                 <i class='bx bx-x' style="color: rgb(255, 255, 255);" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="classes">Курсларымыз</a></li>  
-                    <li><a href="teachers">Устазларымыз</a></li>  
-                    <li><a href="communication">Контактлеримиз</a></li>
-                    <li><a href="aboutUs">Бизлер хаккимизда</a></li>
+                    <li><a href="#classes">Курсларымыз</a></li>  
+                    <li><a href="#teachers">Устазларымыз</a></li>  
+                    <li><a href="#contacts">Контактлеримиз</a></li>
+                    <!-- <li><a href="aboutUs">Бизлер хаккимизда</a></li> -->
                 </ul>
             </div>
             <a href="TEL:+998910054724"><button>91 005 47 24</button></a>
@@ -43,11 +43,10 @@
                     <input type="tel" placeholder="ваш телефон номер" id="phone" >
                     <button type="submit">Записаться</button>
                 </form>
-               
             </div>
         </section>
 
-        <section class="cources">
+        <section class="cources" id="classes">
             <h1>Bizlerdin kurslarimiz</h1>
             <div class="subject subjects-first-line">
                 <div>
@@ -153,7 +152,7 @@
             
         </section>
 
-        <section class="teachers">
+        <section class="teachers" id="teachers">
             <h1>Bizlerdin usazlarimiz</h1>
             <div class="desktop line-one">
                 <div>
@@ -257,12 +256,32 @@
                 </div>
             </div>
 
-
         </section>
-        
+
+        <section class="contacts" id="contacts">
+            <div class="links">
+                <div class="icons">
+                    <a href="https://www.instagram.com/muzaffar_kulbaev/"><img src="./images/Instagram.png" alt=""></a>
+                    <a href="TEL:+998910054724"><button>91 005 47 24</button></a>
+                    <a href="https://t.me/KM3009"><img src="./images/telegram-removebg-preview.png" alt=""></a>
+                </div>
+                <div class="map">
+                    <img src="images/map.jpg" alt="">
+                </div>
+            </div>
+            <div class="form-container">
+                <h2>Записаться на первый урок!</h2>
+                <p>Оставьте заявку и наш менеджер свяжется с вами.</p>
+                <form id="signupForm">
+                    <input type="text" placeholder="Ваше имя" id="name" required>
+                    <input type="tel" placeholder="ваш телефон номер" id="phone" >
+                    <button type="submit">Записаться</button>
+                </form>
+            </div>
+            
+        </section>
 
         <script>
-        
             document.getElementById("signupForm").addEventListener("submit", function(event) {
                 event.preventDefault();
 
@@ -310,8 +329,6 @@
             function hideMenu(){
                 navLinks.style.right = "-230px";
             }
-    
-    
         </script>
 
 
