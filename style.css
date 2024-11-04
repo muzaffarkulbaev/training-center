@@ -299,10 +299,112 @@ cursor: pointer;
     font-weight: bold;
 }
 
+.flag{
+    width: 100px;
+    height: 600px;
+}
 
+.man{
+    width: 245px;
+    height: 305px;
+}
+
+.images{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20%;
+}
+
+.accardeon{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 10%;
+}
+
+.image-container img {
+    border-radius: 20px;
+    display: none; /* Скрываем все изображения */
+    width: 300px; /* Настройте размер изображения */
+}
+.image-container img.active {
+    display: block; /* Отображаем активное изображение */
+}
+
+.slide-btn{
+    color: white;
+    background: #2e47e8;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.results{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.result-text{
+    margin-top: 5%;
+}
+
+.result-img{
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
+
+.word-one{
+    color: blue; font-weight: 600; font-size: 60px;
+}
+
+.word-two{
+    color: rgb(0, 0, 0); font-weight: 600; font-size: 60px;
+}
+
+.word-three{
+    font-weight: 500; font-size: 50px;
+}
+
+.word-four{
+    font-weight: 400; font-size: 25px;
+}
 
 @media(max-width: 1190px){
 
+    .images{
+        gap: 2%;
+    }
+
+    .word-one, .word-two{
+        font-size: 50px;
+    }
+
+    .word-three{
+        font-size: 40px;
+    }
+
+    .word-four{
+        font-size: 23px;
+    }
+    
+
+    .slide-btn{
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .image-container img {
+        width: 250px; /* Настройте размер изображения */
+    }
 
     .map img{
         width: 600px;
@@ -327,6 +429,29 @@ cursor: pointer;
     }
 
 @media(max-width: 1060px){
+
+    .accardeon{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .man{
+        display: none;
+    }
+
+    .accardeon{
+        gap: 20px;
+    }
+
+    .slide-btn{
+        width: 100px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .image-container img {
+        width: 200px; /* Настройте размер изображения */
+    }
 
     .contacts{
         flex-direction: column;
@@ -442,6 +567,11 @@ cursor: pointer;
 
 @media(max-width: 700px){
 
+    .images{
+        display: none;
+    }
+
+    
 
     .icons{
         gap: 40px;
@@ -497,6 +627,32 @@ cursor: pointer;
 }
 
 @media(max-width: 560px){
+
+
+    .accardeon{
+        width: 100%;
+    }
+
+    .results{
+        justify-content: center;
+    }
+
+    .result-img{
+        width: 120%;
+    }
+
+    .word-one, .word-two{
+        font-size: 40px;
+    }
+
+    .word-three{
+        font-size: 30px;
+    }
+
+    .word-four{
+        font-size: 18px;
+    }
+
     nav button{
         margin-left: 60px;
     }
@@ -524,6 +680,7 @@ cursor: pointer;
 }
 
 @media(max-width: 480px){
+
     .form-container{
         width: 250px;
         justify-content: center;

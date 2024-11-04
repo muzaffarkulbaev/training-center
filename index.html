@@ -258,6 +258,26 @@
 
         </section>
 
+        <section class="results">
+            <div class="images">
+                <img class="flag" src="./images/flag.png" alt="">
+                <img class="man" src="./images/business-man-photo-50-removebg-preview.png" alt="">
+            </div>
+            <div class="result-img">
+                <p class="result-text"><p class="word-one">Результаты</p> <p class="word-two">IELTS</p> <p class="word-three">наших студентов</p> <p class="word-four">Знакомьтесь с радующими глаз результатами наших учеников !</p></p>
+                <div class="accardeon">
+                    <button class="slide-btn" onclick="showPreviousImage()">Prev</button>
+                    <div class="image-container">
+                        <img src="./images/001.jpg" alt="" class="active"> 
+                        <img src="./images/002.jpg" alt="">
+                        <img src="./images/003.jpg" alt="">
+                        <img src="./images/004.jpg" alt="">
+                    </div>
+                    <button class="slide-btn" onclick="showNextImage()">Next</button>
+                </div>
+            </div>
+        </section>
+
         <section class="contacts" id="contacts">
             <div class="links">
                 <div class="icons">
@@ -282,6 +302,22 @@
         </section>
 
         <script>
+
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.image-container img');
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active'); // Скрываем текущее изображение
+                currentIndex = (currentIndex + 1) % images.length; // Переходим к следующему изображению
+                images[currentIndex].classList.add('active'); // Отображаем следующее изображение
+            }
+
+            function showPreviousImage() {
+                images[currentIndex].classList.remove('active'); // Скрываем текущее изображение
+                currentIndex = (currentIndex - 1 + images.length) % images.length; // Переходим к предыдущему изображению
+                images[currentIndex].classList.add('active'); // Отображаем предыдущее изображение
+            }
+
             document.getElementById("signupForm").addEventListener("submit", function(event) {
                 event.preventDefault();
 
